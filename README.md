@@ -190,4 +190,4 @@ frontend/
 ## AI usage disclosure
 
 - **At runtime,** the system uses Google Gemini (`gemini-3.5-flash` for extraction, `gemini-embedding-001` for search) or, optionally, OpenAI. All validation and every valid / needs-review / invalid verdict come from plain code, not AI.
-- **During development,** Claude Code (Anthropic) was used as a coding assistant for implementation, tests and documentation. Design decisions, requirements and the review of results were mine.
+- **During development,** Claude Code (Anthropic) was used as a coding assistant for implementation and tests. Design decisions, requirements and the review of results were mine.
