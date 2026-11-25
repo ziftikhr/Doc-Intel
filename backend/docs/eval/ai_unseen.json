@@ -1,0 +1,614 @@
+{
+ "name": "ai_unseen",
+ "llm": "auto",
+ "when": "2026-11-25T12:53:04+00:00",
+ "machine": "Windows 11, AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD, Python 3.13.5",
+ "model": "gemini-3.5-flash",
+ "dataset": {
+  "seed": 2026,
+  "documents": 8
+ },
+ "metrics": {
+  "documents": {
+   "total": 8,
+   "valid_inputs": 8,
+   "broken_inputs": 0,
+   "success_rate": 12.5,
+   "failure_rate": 87.5,
+   "failed_files": [
+    "062_unseen_digital_pdf.pdf",
+    "063_unseen_digital_pdf.pdf",
+    "064_unseen_digital_pdf.pdf",
+    "065_unseen_digital_pdf.pdf",
+    "066_unseen_scanned_pdf.pdf",
+    "067_unseen_scanned_pdf.pdf",
+    "068_unseen_photo_jpg.jpg"
+   ],
+   "broken_correctly_rejected": null,
+   "crashes": 0
+  },
+  "extraction": {
+   "overall": {
+    "invoice_number": 12.5,
+    "invoice_date": 12.5,
+    "supplier_name": 12.5,
+    "customer_name": 12.5,
+    "subtotal": 12.5,
+    "tax": 12.5,
+    "total": 12.5,
+    "currency": 12.5,
+    "all_fields": 12.5,
+    "invoices_fully_correct": 12.5,
+    "invoices_found": 12.5,
+    "n_invoices": 8
+   },
+   "by_format": {
+    "digital_pdf": {
+     "invoice_number": 20.0,
+     "invoice_date": 20.0,
+     "supplier_name": 20.0,
+     "customer_name": 20.0,
+     "subtotal": 20.0,
+     "tax": 20.0,
+     "total": 20.0,
+     "currency": 20.0,
+     "all_fields": 20.0,
+     "invoices_fully_correct": 20.0,
+     "invoices_found": 20.0,
+     "n_invoices": 5
+    },
+    "photo_jpg": {
+     "invoice_number": 0.0,
+     "invoice_date": 0.0,
+     "supplier_name": 0.0,
+     "customer_name": 0.0,
+     "subtotal": 0.0,
+     "tax": 0.0,
+     "total": 0.0,
+     "currency": 0.0,
+     "all_fields": 0.0,
+     "invoices_fully_correct": 0.0,
+     "invoices_found": 0.0,
+     "n_invoices": 1
+    },
+    "scanned_pdf": {
+     "invoice_number": 0.0,
+     "invoice_date": 0.0,
+     "supplier_name": 0.0,
+     "customer_name": 0.0,
+     "subtotal": 0.0,
+     "tax": 0.0,
+     "total": 0.0,
+     "currency": 0.0,
+     "all_fields": 0.0,
+     "invoices_fully_correct": 0.0,
+     "invoices_found": 0.0,
+     "n_invoices": 2
+    }
+   },
+   "by_layout": {
+    "unseen": {
+     "invoice_number": 12.5,
+     "invoice_date": 12.5,
+     "supplier_name": 12.5,
+     "customer_name": 12.5,
+     "subtotal": 12.5,
+     "tax": 12.5,
+     "total": 12.5,
+     "currency": 12.5,
+     "all_fields": 12.5,
+     "invoices_fully_correct": 12.5,
+     "invoices_found": 12.5,
+     "n_invoices": 8
+    }
+   },
+   "extra_invoices": 0,
+   "errors_by_field": {},
+   "examples": {}
+  },
+  "line_items": {
+   "recall": 14.3,
+   "precision": 100.0,
+   "qty_and_price_correct": 100.0,
+   "labeled": 35,
+   "extracted": 5
+  },
+  "charges": {
+   "invoices_with_charges": 4,
+   "sum_correct": 25.0,
+   "false_charges_on_invoices_without": 0
+  },
+  "validation": {
+   "planted_detected": {
+    "DATE_IN_FUTURE": {
+     "detected": 1,
+     "planted": 3,
+     "recall": 33.3
+    }
+   },
+   "planted_recall_overall": 33.3,
+   "clean_invoices": 0,
+   "clean_marked_invalid": null,
+   "clean_marked_valid": null,
+   "false_alarm_codes": {}
+  },
+  "timing_ms": {
+   "per_document": {
+    "n": 8,
+    "mean": 5184.2,
+    "p50": 4774.8,
+    "p95": 6570.6,
+    "max": 6570.6
+   },
+   "per_format": {
+    "digital_pdf": {
+     "n": 5,
+     "mean": 4534.7,
+     "p50": 4644.3,
+     "p95": 4774.8,
+     "max": 4774.8
+    },
+    "photo_jpg": {
+     "n": 1,
+     "mean": 5815.1,
+     "p50": 5815.1,
+     "p95": 5815.1,
+     "max": 5815.1
+    },
+    "scanned_pdf": {
+     "n": 2,
+     "mean": 6492.6,
+     "p50": 6414.7,
+     "p95": 6570.6,
+     "max": 6570.6
+    }
+   },
+   "stage_mean": {
+    "processing": 632.0,
+    "extraction": 4552.1,
+    "validation": 0.1
+   },
+   "pages": 8,
+   "pages_per_minute": 11.6,
+   "documents_per_minute": 11.6
+  },
+  "llm_usage": {
+   "calls": 8,
+   "failed_calls": 7,
+   "input_tokens": 748,
+   "output_tokens": 1022
+  }
+ },
+ "documents": [
+  {
+   "file": "061_unseen_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 17.240700020920485,
+    "extraction": 4519.500199996401,
+    "validation": 0.29120000544935465,
+    "total": 4537.0321000227705
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/6018",
+     "found": true,
+     "method": "llm",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "DATE_IN_FUTURE"
+     ],
+     "detected": {
+      "DATE_IN_FUTURE": true
+     },
+     "status": "needs_review",
+     "codes": [
+      "DATE_IN_FUTURE"
+     ],
+     "lines": {
+      "matched": 5,
+      "labeled": 5,
+      "extracted": 5,
+      "qty_price_ok": 5
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "062_unseen_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 14.631500001996756,
+    "extraction": 4737.259700021241,
+    "validation": 0.03159997868351638,
+    "total": 4751.922800001921
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/8127",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 5,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": false,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "LLM_NO_CREDIT: Gemini daily request limit reached (20/day); try again in about 19h"
+  },
+  {
+   "file": "063_unseen_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 14.66789998812601,
+    "extraction": 3950.617099995725,
+    "validation": 0.035900011425837874,
+    "total": 3965.3208999952767
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/3450",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 5,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": true,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "LLM_NO_CREDIT: Gemini daily request limit reached (20/day); try again in about 19h"
+  },
+  {
+   "file": "064_unseen_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 15.55839998763986,
+    "extraction": 4759.212300006766,
+    "validation": 0.039300008211284876,
+    "total": 4774.810000002617
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/3750",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 9,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": false,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "LLM_NO_CREDIT: Gemini daily request limit reached (20/day); try again in about 19h"
+  },
+  {
+   "file": "065_unseen_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 14.979500003391877,
+    "extraction": 4629.2939000122715,
+    "validation": 0.02889998722821474,
+    "total": 4644.302300002892
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/4983",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [
+      "DATE_IN_FUTURE"
+     ],
+     "detected": {
+      "DATE_IN_FUTURE": false
+     },
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 4,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": false,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "LLM_NO_CREDIT: Gemini daily request limit reached (20/day); try again in about 19h"
+  },
+  {
+   "file": "066_unseen_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 2192.4731000035536,
+    "extraction": 4378.087699995376,
+    "validation": 0.03190001007169485,
+    "total": 6570.592700009001
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/5452",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 3,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": true,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "LLM_NO_CREDIT: Gemini daily request limit reached (20/day); try again in about 19h"
+  },
+  {
+   "file": "067_unseen_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 1258.119700010866,
+    "extraction": 5156.5365999995265,
+    "validation": 0.02929999027401209,
+    "total": 6414.685600000666
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/3964",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 1,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": true,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "LLM_NO_CREDIT: Gemini daily request limit reached (20/day); try again in about 19h"
+  },
+  {
+   "file": "068_unseen_photo_jpg.jpg",
+   "format": "photo_jpg",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 1528.6948000139091,
+    "extraction": 4286.351399990963,
+    "validation": 0.027600006433203816,
+    "total": 5815.073800011305
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/2817",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [
+      "DATE_IN_FUTURE"
+     ],
+     "detected": {
+      "DATE_IN_FUTURE": false
+     },
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 3,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": false,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "LLM_NO_CREDIT: Gemini daily request limit reached (20/day); try again in about 19h"
+  }
+ ]
+}

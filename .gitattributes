@@ -1,0 +1,15 @@
+# Normalise source files; never touch the bytes of documents and test data.
+* text=auto
+
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.tif  binary
+*.tiff binary
+*.xls  binary
+*.xlsx binary
+*.docx binary
+
+# Sample and test documents are fixtures: their exact bytes (encodings, line endings) matter.
+backend/samples/** -text

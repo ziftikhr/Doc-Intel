@@ -1,0 +1,31 @@
+# PostgreSQL 18 + pgvector for docintel (Task 5: storage + semantic search).
+#
+#   docker compose up -d      start (the first start creates the database)
+#   docker compose stop       stop, keep the data
+#
+# Credentials come from .env (git-ignored). Port 5433 on this PC, so it never
+# clashes with another PostgreSQL on the default port 5432.
+name: docintel
+
+services:
+  db:
+    image: pgvector/pgvector:pg18
+    container_name: docintel-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-docintel}
+      POSTGRES_USER: ${POSTGRES_USER:-docintel}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5433}:5432"   # reachable from this PC only
+    volumes:
+      - docintel-pgdata:/var/lib/postgresql        # data survives container restarts and rebuilds
+      - ./db/init:/docker-entrypoint-initdb.d:ro    # runs once, on the very first start
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  docintel-pgdata:

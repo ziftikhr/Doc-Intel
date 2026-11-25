@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docintel"
+version = "0.1.0"
+description = "AI-Powered Document Intelligence System - processing, extraction, validation, API and search"
+requires-python = ">=3.11"
+dependencies = [
+    "pymupdf>=1.24",
+    "pillow>=10.1",
+    "opencv-python-headless>=4.9",
+    "numpy>=1.26",
+    "openpyxl>=3.1",
+    "xlrd>=2.0",
+    "defusedxml>=0.7",          # openpyxl uses it automatically to block XML entity attacks
+    "charset-normalizer>=3.3",
+    "pydantic>=2.6",
+    "pytesseract>=0.3.10",
+    "openai>=2.0",              # Task 2 LLM extraction (optional at runtime: rules-only without a key)
+    "google-genai>=1.0",        # Task 2 LLM extraction via Gemini
+    "psycopg[binary]>=3.2",     # Task 5 PostgreSQL driver (database runs in docker-compose.yml)
+    "sqlalchemy>=2.0.30",       # Task 5 ORM
+    "pgvector>=0.3",            # Task 5 vector column type for SQLAlchemy
+    "fastapi>=0.115",           # Task 4 REST API
+    "uvicorn[standard]>=0.30",  # Task 4 ASGI server
+    "python-multipart>=0.0.9",  # Task 4 file uploads
+    "python-dotenv>=1.0",       # reads OPENAI_API_KEY from .env
+]
+
+[project.optional-dependencies]
+# Pure-pip OCR engine used when the Tesseract binary is not installed.
+rapidocr = ["rapidocr>=3.0", "onnxruntime>=1.20"]
+dev = ["pytest>=8", "pytest-cov>=5", "xlwt>=1.3", "httpx>=0.27", "ruff>=0.6"]
+
+[project.scripts]
+docintel = "docintel.processing.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+extend-exclude = ["eval_data*", "storage"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]
+# B008: FastAPI's Depends()/File() in defaults is the framework's documented style.
+# B905: zip() over lists built together; strict= adds nothing here.
+ignore = ["B008", "B905"]
+
+[tool.ruff.lint.per-file-ignores]
+"evaluation/report.py" = ["E501"]  # long Markdown sentences in f-strings
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+    "ocr: tests that need an OCR engine (skipped when none is installed)",
+    "slow: longer-running scale tests",
+    "llm: calls the real LLM API (skipped unless DOCINTEL_LIVE_LLM=1)",
+]
+filterwarnings = ["ignore::DeprecationWarning"]

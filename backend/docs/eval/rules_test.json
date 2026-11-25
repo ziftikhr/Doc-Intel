@@ -1,0 +1,6658 @@
+{
+ "name": "rules_test",
+ "llm": "none",
+ "when": "2026-11-25T12:50:58+00:00",
+ "machine": "Windows 11, AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD, Python 3.13.5",
+ "model": null,
+ "dataset": {
+  "seed": 2026,
+  "documents": 95
+ },
+ "metrics": {
+  "documents": {
+   "total": 95,
+   "valid_inputs": 86,
+   "broken_inputs": 9,
+   "success_rate": 86.0,
+   "failure_rate": 14.0,
+   "failed_files": [
+    "061_unseen_digital_pdf.pdf",
+    "062_unseen_digital_pdf.pdf",
+    "063_unseen_digital_pdf.pdf",
+    "064_unseen_digital_pdf.pdf",
+    "065_unseen_digital_pdf.pdf",
+    "066_unseen_scanned_pdf.pdf",
+    "067_unseen_scanned_pdf.pdf",
+    "068_unseen_photo_jpg.jpg",
+    "069_unseen_photo_jpg.jpg",
+    "070_unseen_png.png",
+    "071_unseen_digital_pdf.pdf",
+    "072_unseen_digital_pdf.pdf"
+   ],
+   "broken_correctly_rejected": 100.0,
+   "crashes": 0
+  },
+  "extraction": {
+   "overall": {
+    "invoice_number": 91.3,
+    "invoice_date": 91.3,
+    "supplier_name": 91.3,
+    "customer_name": 91.3,
+    "subtotal": 91.3,
+    "tax": 91.3,
+    "total": 90.6,
+    "currency": 91.3,
+    "all_fields": 91.2,
+    "invoices_fully_correct": 90.6,
+    "invoices_found": 91.3,
+    "n_invoices": 138
+   },
+   "by_format": {
+    "csv": {
+     "invoice_number": 100.0,
+     "invoice_date": 100.0,
+     "supplier_name": 100.0,
+     "customer_name": 100.0,
+     "subtotal": 100.0,
+     "tax": 100.0,
+     "total": 100.0,
+     "currency": 100.0,
+     "all_fields": 100.0,
+     "invoices_fully_correct": 100.0,
+     "invoices_found": 100.0,
+     "n_invoices": 14
+    },
+    "digital_pdf": {
+     "invoice_number": 84.8,
+     "invoice_date": 84.8,
+     "supplier_name": 84.8,
+     "customer_name": 84.8,
+     "subtotal": 84.8,
+     "tax": 84.8,
+     "total": 82.6,
+     "currency": 84.8,
+     "all_fields": 84.5,
+     "invoices_fully_correct": 82.6,
+     "invoices_found": 84.8,
+     "n_invoices": 46
+    },
+    "multi_invoice_pdf": {
+     "invoice_number": 100.0,
+     "invoice_date": 100.0,
+     "supplier_name": 100.0,
+     "customer_name": 100.0,
+     "subtotal": 100.0,
+     "tax": 100.0,
+     "total": 100.0,
+     "currency": 100.0,
+     "all_fields": 100.0,
+     "invoices_fully_correct": 100.0,
+     "invoices_found": 100.0,
+     "n_invoices": 20
+    },
+    "photo_jpg": {
+     "invoice_number": 83.3,
+     "invoice_date": 83.3,
+     "supplier_name": 83.3,
+     "customer_name": 83.3,
+     "subtotal": 83.3,
+     "tax": 83.3,
+     "total": 83.3,
+     "currency": 83.3,
+     "all_fields": 83.3,
+     "invoices_fully_correct": 83.3,
+     "invoices_found": 83.3,
+     "n_invoices": 12
+    },
+    "png": {
+     "invoice_number": 83.3,
+     "invoice_date": 83.3,
+     "supplier_name": 83.3,
+     "customer_name": 83.3,
+     "subtotal": 83.3,
+     "tax": 83.3,
+     "total": 83.3,
+     "currency": 83.3,
+     "all_fields": 83.3,
+     "invoices_fully_correct": 83.3,
+     "invoices_found": 83.3,
+     "n_invoices": 6
+    },
+    "scanned_pdf": {
+     "invoice_number": 83.3,
+     "invoice_date": 83.3,
+     "supplier_name": 83.3,
+     "customer_name": 83.3,
+     "subtotal": 83.3,
+     "tax": 83.3,
+     "total": 83.3,
+     "currency": 83.3,
+     "all_fields": 83.3,
+     "invoices_fully_correct": 83.3,
+     "invoices_found": 83.3,
+     "n_invoices": 12
+    },
+    "xlsx": {
+     "invoice_number": 100.0,
+     "invoice_date": 100.0,
+     "supplier_name": 100.0,
+     "customer_name": 100.0,
+     "subtotal": 100.0,
+     "tax": 100.0,
+     "total": 100.0,
+     "currency": 100.0,
+     "all_fields": 100.0,
+     "invoices_fully_correct": 100.0,
+     "invoices_found": 100.0,
+     "n_invoices": 28
+    }
+   },
+   "by_layout": {
+    "classic": {
+     "invoice_number": 100.0,
+     "invoice_date": 100.0,
+     "supplier_name": 100.0,
+     "customer_name": 100.0,
+     "subtotal": 100.0,
+     "tax": 100.0,
+     "total": 100.0,
+     "currency": 100.0,
+     "all_fields": 100.0,
+     "invoices_fully_correct": 100.0,
+     "invoices_found": 100.0,
+     "n_invoices": 15
+    },
+    "german": {
+     "invoice_number": 100.0,
+     "invoice_date": 100.0,
+     "supplier_name": 100.0,
+     "customer_name": 100.0,
+     "subtotal": 100.0,
+     "tax": 100.0,
+     "total": 100.0,
+     "currency": 100.0,
+     "all_fields": 100.0,
+     "invoices_fully_correct": 100.0,
+     "invoices_found": 100.0,
+     "n_invoices": 12
+    },
+    "header_row": {
+     "invoice_number": 100.0,
+     "invoice_date": 100.0,
+     "supplier_name": 100.0,
+     "customer_name": 100.0,
+     "subtotal": 100.0,
+     "tax": 100.0,
+     "total": 91.7,
+     "currency": 100.0,
+     "all_fields": 99.0,
+     "invoices_fully_correct": 91.7,
+     "invoices_found": 100.0,
+     "n_invoices": 12
+    },
+    "mixed": {
+     "invoice_number": 100.0,
+     "invoice_date": 100.0,
+     "supplier_name": 100.0,
+     "customer_name": 100.0,
+     "subtotal": 100.0,
+     "tax": 100.0,
+     "total": 100.0,
+     "currency": 100.0,
+     "all_fields": 100.0,
+     "invoices_fully_correct": 100.0,
+     "invoices_found": 100.0,
+     "n_invoices": 20
+    },
+    "receipt": {
+     "invoice_number": 100.0,
+     "invoice_date": 100.0,
+     "supplier_name": 100.0,
+     "customer_name": 100.0,
+     "subtotal": 100.0,
+     "tax": 100.0,
+     "total": 100.0,
+     "currency": 100.0,
+     "all_fields": 100.0,
+     "invoices_fully_correct": 100.0,
+     "invoices_found": 100.0,
+     "n_invoices": 12
+    },
+    "register": {
+     "invoice_number": 100.0,
+     "invoice_date": 100.0,
+     "supplier_name": 100.0,
+     "customer_name": 100.0,
+     "subtotal": 100.0,
+     "tax": 100.0,
+     "total": 100.0,
+     "currency": 100.0,
+     "all_fields": 100.0,
+     "invoices_fully_correct": 100.0,
+     "invoices_found": 100.0,
+     "n_invoices": 42
+    },
+    "two_column": {
+     "invoice_number": 100.0,
+     "invoice_date": 100.0,
+     "supplier_name": 100.0,
+     "customer_name": 100.0,
+     "subtotal": 100.0,
+     "tax": 100.0,
+     "total": 100.0,
+     "currency": 100.0,
+     "all_fields": 100.0,
+     "invoices_fully_correct": 100.0,
+     "invoices_found": 100.0,
+     "n_invoices": 13
+    },
+    "unseen": {
+     "invoice_number": 0.0,
+     "invoice_date": 0.0,
+     "supplier_name": 0.0,
+     "customer_name": 0.0,
+     "subtotal": 0.0,
+     "tax": 0.0,
+     "total": 0.0,
+     "currency": 0.0,
+     "all_fields": 0.0,
+     "invoices_fully_correct": 0.0,
+     "invoices_found": 0.0,
+     "n_invoices": 12
+    }
+   },
+   "extra_invoices": 0,
+   "errors_by_field": {
+    "total": 1
+   },
+   "examples": {
+    "total": [
+     {
+      "file": "039_header_row_digital_pdf.pdf",
+      "expected": "-24.71",
+      "got": "24.71"
+     }
+    ]
+   }
+  },
+  "line_items": {
+   "recall": 85.7,
+   "precision": 100.0,
+   "qty_and_price_correct": 100.0,
+   "labeled": 440,
+   "extracted": 377
+  },
+  "charges": {
+   "invoices_with_charges": 52,
+   "sum_correct": 88.5,
+   "false_charges_on_invoices_without": 0
+  },
+  "validation": {
+   "planted_detected": {
+    "MISSING_REQUIRED_FIELD": {
+     "detected": 4,
+     "planted": 4,
+     "recall": 100.0
+    },
+    "TOTAL_MISMATCH": {
+     "detected": 4,
+     "planted": 4,
+     "recall": 100.0
+    },
+    "LINE_ITEM_MISMATCH": {
+     "detected": 3,
+     "planted": 3,
+     "recall": 100.0
+    },
+    "DATE_IN_FUTURE": {
+     "detected": 2,
+     "planted": 5,
+     "recall": 40.0
+    },
+    "DUPLICATE_INVOICE": {
+     "detected": 4,
+     "planted": 4,
+     "recall": 100.0
+    }
+   },
+   "planted_recall_overall": 85.0,
+   "clean_invoices": 109,
+   "clean_marked_invalid": 0.0,
+   "clean_marked_valid": 91.7,
+   "false_alarm_codes": {}
+  },
+  "timing_ms": {
+   "per_document": {
+    "n": 95,
+    "mean": 461.5,
+    "p50": 24.6,
+    "p95": 1524.6,
+    "max": 2280.9
+   },
+   "per_format": {
+    "broken": {
+     "n": 9,
+     "mean": 6.9,
+     "p50": 1.6,
+     "p95": 31.4,
+     "max": 31.4
+    },
+    "csv": {
+     "n": 2,
+     "mean": 58.7,
+     "p50": 10.3,
+     "p95": 107.2,
+     "max": 107.2
+    },
+    "digital_pdf": {
+     "n": 46,
+     "mean": 22.9,
+     "p50": 22.3,
+     "p95": 28.8,
+     "max": 30.3
+    },
+    "multi_invoice_pdf": {
+     "n": 5,
+     "mean": 35.8,
+     "p50": 30.0,
+     "p95": 52.7,
+     "max": 52.7
+    },
+    "photo_jpg": {
+     "n": 12,
+     "mean": 1386.9,
+     "p50": 1348.0,
+     "p95": 1640.4,
+     "max": 1794.7
+    },
+    "png": {
+     "n": 6,
+     "mean": 1375.1,
+     "p50": 1265.6,
+     "p95": 1829.4,
+     "max": 1829.4
+    },
+    "scanned_pdf": {
+     "n": 12,
+     "mean": 1444.9,
+     "p50": 1370.9,
+     "p95": 1576.6,
+     "max": 2280.9
+    },
+    "xlsx": {
+     "n": 3,
+     "mean": 65.3,
+     "p50": 17.3,
+     "p95": 163.5,
+     "max": 163.5
+    }
+   },
+   "stage_mean": {
+    "processing": 459.3,
+    "extraction": 1.6,
+    "validation": 0.5
+   },
+   "pages": 103,
+   "pages_per_minute": 141.0,
+   "documents_per_minute": 130.0
+  },
+  "llm_usage": {
+   "calls": 0,
+   "failed_calls": 0,
+   "input_tokens": 0,
+   "output_tokens": 0
+  }
+ },
+ "documents": [
+  {
+   "file": "001_classic_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 25.25529998820275,
+    "extraction": 2.6416000036988407,
+    "validation": 0.2683000057004392,
+    "total": 28.16519999760203
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-3778",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 9,
+      "labeled": 9,
+      "extracted": 9,
+      "qty_price_ok": 9
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "002_classic_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 21.055399993201718,
+    "extraction": 1.500999991549179,
+    "validation": 0.13970001600682735,
+    "total": 22.696100000757724
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-8476",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 4,
+      "labeled": 4,
+      "extracted": 4,
+      "qty_price_ok": 4
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "003_classic_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 21.015400008764118,
+    "extraction": 1.590500003658235,
+    "validation": 0.1446999958716333,
+    "total": 22.750600008293986
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-6850",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 8,
+      "labeled": 8,
+      "extracted": 8,
+      "qty_price_ok": 8
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "004_classic_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 20.574399997713044,
+    "extraction": 1.3248000177554786,
+    "validation": 0.1416000013705343,
+    "total": 22.040800016839057
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-3683",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 6,
+      "labeled": 6,
+      "extracted": 6,
+      "qty_price_ok": 6
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "005_classic_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 20.601500000339,
+    "extraction": 1.511400012532249,
+    "validation": 0.15669999993406236,
+    "total": 22.269600012805313
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-4695",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 5,
+      "labeled": 5,
+      "extracted": 5,
+      "qty_price_ok": 5
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "006_classic_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 2279.3250999820884,
+    "extraction": 1.3974000175949186,
+    "validation": 0.1936999906320125,
+    "total": 2280.9161999903154
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-4221",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "needs_review",
+     "codes": [
+      "CURRENCY_INFERRED",
+      "LOW_CONFIDENCE"
+     ],
+     "lines": {
+      "matched": 7,
+      "labeled": 7,
+      "extracted": 7,
+      "qty_price_ok": 7
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "007_classic_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1368.4706999920309,
+    "extraction": 1.5370000037364662,
+    "validation": 0.22059999173507094,
+    "total": 1370.2282999875024
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-2519",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 5,
+      "labeled": 5,
+      "extracted": 5,
+      "qty_price_ok": 5
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "008_classic_photo_jpg.jpg",
+   "format": "photo_jpg",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1483.9541999972425,
+    "extraction": 1.8387000018265098,
+    "validation": 0.2300000051036477,
+    "total": 1486.0229000041727
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-5997",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 2,
+      "labeled": 2,
+      "extracted": 2,
+      "qty_price_ok": 2
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "009_classic_photo_jpg.jpg",
+   "format": "photo_jpg",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1373.790999990888,
+    "extraction": 1.6768999921623617,
+    "validation": 0.23510001483373344,
+    "total": 1375.702999997884
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-0781",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 5,
+      "labeled": 5,
+      "extracted": 5,
+      "qty_price_ok": 5
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "010_classic_png.png",
+   "format": "png",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 1263.8228999858256,
+    "extraction": 1.5362999984063208,
+    "validation": 0.2727000101003796,
+    "total": 1265.6318999943323
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-0565",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "needs_review",
+     "codes": [
+      "CURRENCY_INFERRED",
+      "LOW_CONFIDENCE"
+     ],
+     "lines": {
+      "matched": 1,
+      "labeled": 1,
+      "extracted": 1,
+      "qty_price_ok": 1
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "011_classic_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 20.620099996449426,
+    "extraction": 0.9978000016417354,
+    "validation": 0.17980000120587647,
+    "total": 21.797699999297038
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-1231",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "needs_review",
+     "codes": [
+      "CURRENCY_INFERRED",
+      "LOW_CONFIDENCE"
+     ],
+     "lines": {
+      "matched": 3,
+      "labeled": 3,
+      "extracted": 3,
+      "qty_price_ok": 3
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "012_classic_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "invalid",
+   "ms": {
+    "processing": 20.81669998005964,
+    "extraction": 1.7977000097744167,
+    "validation": 0.19950000569224358,
+    "total": 22.8138999955263
+   },
+   "invoices": [
+    {
+     "invoice_number": null,
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "MISSING_REQUIRED_FIELD"
+     ],
+     "detected": {
+      "MISSING_REQUIRED_FIELD": true
+     },
+     "status": "invalid",
+     "codes": [
+      "MISSING_REQUIRED_FIELD"
+     ],
+     "lines": {
+      "matched": 9,
+      "labeled": 9,
+      "extracted": 9,
+      "qty_price_ok": 9
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "013_two_column_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "two_column",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 22.023400000762194,
+    "extraction": 1.8354000058025122,
+    "validation": 0.19310001516714692,
+    "total": 24.051900021731853
+   },
+   "invoices": [
+    {
+     "invoice_number": "PN-05728",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 7,
+      "labeled": 7,
+      "extracted": 7,
+      "qty_price_ok": 7
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "014_two_column_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "two_column",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 27.844800002640113,
+    "extraction": 1.4853999891784042,
+    "validation": 0.1841000048443675,
+    "total": 29.514299996662885
+   },
+   "invoices": [
+    {
+     "invoice_number": "NW-01586",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 3,
+      "labeled": 3,
+      "extracted": 3,
+      "qty_price_ok": 3
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "015_two_column_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "two_column",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 21.707899984903634,
+    "extraction": 1.6385000199079514,
+    "validation": 0.20029998268000782,
+    "total": 23.546699987491593
+   },
+   "invoices": [
+    {
+     "invoice_number": "FE-05004",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 5,
+      "labeled": 5,
+      "extracted": 5,
+      "qty_price_ok": 5
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "016_two_column_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "two_column",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "invalid",
+   "ms": {
+    "processing": 19.729699997697026,
+    "extraction": 1.0832000116351992,
+    "validation": 0.20889998995698988,
+    "total": 21.021799999289215
+   },
+   "invoices": [
+    {
+     "invoice_number": "TS-01607",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "TOTAL_MISMATCH"
+     ],
+     "detected": {
+      "TOTAL_MISMATCH": true
+     },
+     "status": "invalid",
+     "codes": [
+      "TOTAL_MISMATCH"
+     ],
+     "lines": {
+      "matched": 1,
+      "labeled": 1,
+      "extracted": 1,
+      "qty_price_ok": 1
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "017_two_column_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "two_column",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 21.807299985084683,
+    "extraction": 1.6567000129725784,
+    "validation": 0.2136999974027276,
+    "total": 23.67769999545999
+   },
+   "invoices": [
+    {
+     "invoice_number": "FD-05898",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 5,
+      "labeled": 5,
+      "extracted": 5,
+      "qty_price_ok": 5
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "018_two_column_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "two_column",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "invalid",
+   "ms": {
+    "processing": 1574.1655000019819,
+    "extraction": 2.1115000126883388,
+    "validation": 0.309199996991083,
+    "total": 1576.5862000116613
+   },
+   "invoices": [
+    {
+     "invoice_number": null,
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "MISSING_REQUIRED_FIELD"
+     ],
+     "detected": {
+      "MISSING_REQUIRED_FIELD": true
+     },
+     "status": "invalid",
+     "codes": [
+      "MISSING_REQUIRED_FIELD"
+     ],
+     "lines": {
+      "matched": 5,
+      "labeled": 5,
+      "extracted": 5,
+      "qty_price_ok": 5
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "019_two_column_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "two_column",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1450.6213999993633,
+    "extraction": 1.2079000007361174,
+    "validation": 0.22170000011101365,
+    "total": 1452.0510000002105
+   },
+   "invoices": [
+    {
+     "invoice_number": "WH-00776",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 3,
+      "labeled": 3,
+      "extracted": 3,
+      "qty_price_ok": 3
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "020_two_column_photo_jpg.jpg",
+   "format": "photo_jpg",
+   "layout": "two_column",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "invalid",
+   "ms": {
+    "processing": 1791.165100003127,
+    "extraction": 3.1503000063821673,
+    "validation": 0.3497999859973788,
+    "total": 1794.6651999955066
+   },
+   "invoices": [
+    {
+     "invoice_number": "GW-00667",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "TOTAL_MISMATCH"
+     ],
+     "detected": {
+      "TOTAL_MISMATCH": true
+     },
+     "status": "invalid",
+     "codes": [
+      "TOTAL_MISMATCH"
+     ],
+     "lines": {
+      "matched": 9,
+      "labeled": 9,
+      "extracted": 9,
+      "qty_price_ok": 9
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "021_two_column_photo_jpg.jpg",
+   "format": "photo_jpg",
+   "layout": "two_column",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1307.2091999929398,
+    "extraction": 1.191700022900477,
+    "validation": 0.2933999930974096,
+    "total": 1308.6943000089377
+   },
+   "invoices": [
+    {
+     "invoice_number": "PH-00972",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 1,
+      "labeled": 1,
+      "extracted": 1,
+      "qty_price_ok": 1
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "022_two_column_png.png",
+   "format": "png",
+   "layout": "two_column",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1825.7678000081796,
+    "extraction": 3.311100008431822,
+    "validation": 0.36219999310560524,
+    "total": 1829.441100009717
+   },
+   "invoices": [
+    {
+     "invoice_number": "DH-07606",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 9,
+      "labeled": 9,
+      "extracted": 9,
+      "qty_price_ok": 9
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "023_two_column_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "two_column",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 20.8223000227008,
+    "extraction": 1.1295999865978956,
+    "validation": 0.21850000484846532,
+    "total": 22.170400014147162
+   },
+   "invoices": [
+    {
+     "invoice_number": "TD-00182",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 1,
+      "labeled": 1,
+      "extracted": 1,
+      "qty_price_ok": 1
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "024_two_column_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "two_column",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 23.765299993101507,
+    "extraction": 1.8911000224761665,
+    "validation": 0.2440999960526824,
+    "total": 25.900500011630356
+   },
+   "invoices": [
+    {
+     "invoice_number": "BN-05131",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 8,
+      "labeled": 8,
+      "extracted": 8,
+      "qty_price_ok": 8
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "025_german_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "german",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 19.509999983711168,
+    "extraction": 1.6918000183068216,
+    "validation": 0.24649998522363603,
+    "total": 21.448299987241626
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26003950",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 6,
+      "labeled": 6,
+      "extracted": 6,
+      "qty_price_ok": 6
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "026_german_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "german",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 18.688100011786446,
+    "extraction": 1.1597000120673329,
+    "validation": 0.2376999764237553,
+    "total": 20.085500000277534
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26001593",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 2,
+      "labeled": 2,
+      "extracted": 2,
+      "qty_price_ok": 2
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "027_german_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "german",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 17.16149999992922,
+    "extraction": 0.9269999864045531,
+    "validation": 0.22849999368190765,
+    "total": 18.31699998001568
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26005835",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 1,
+      "labeled": 1,
+      "extracted": 1,
+      "qty_price_ok": 1
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "028_german_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "german",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 25.09549999376759,
+    "extraction": 1.0888000251725316,
+    "validation": 0.24729999131523073,
+    "total": 26.43160001025535
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26006965",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 2,
+      "labeled": 2,
+      "extracted": 2,
+      "qty_price_ok": 2
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "029_german_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "german",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 19.922500010579824,
+    "extraction": 1.2820999836549163,
+    "validation": 0.2525000018067658,
+    "total": 21.457099996041507
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26009674",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 4,
+      "labeled": 4,
+      "extracted": 4,
+      "qty_price_ok": 4
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "030_german_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "german",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1253.6869999894407,
+    "extraction": 1.1833000171463937,
+    "validation": 0.3797999816015363,
+    "total": 1255.2500999881886
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26005520",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 1,
+      "labeled": 1,
+      "extracted": 1,
+      "qty_price_ok": 1
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "031_german_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "german",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1308.3573000039905,
+    "extraction": 1.2870999926235527,
+    "validation": 0.27099999715574086,
+    "total": 1309.9153999937698
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26001276",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 2,
+      "labeled": 2,
+      "extracted": 2,
+      "qty_price_ok": 2
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "032_german_photo_jpg.jpg",
+   "format": "photo_jpg",
+   "layout": "german",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1637.7092000038829,
+    "extraction": 2.2401999740395695,
+    "validation": 0.45870000030845404,
+    "total": 1640.408099978231
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26001298",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 9,
+      "labeled": 9,
+      "extracted": 9,
+      "qty_price_ok": 9
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "033_german_photo_jpg.jpg",
+   "format": "photo_jpg",
+   "layout": "german",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1318.6453999951482,
+    "extraction": 1.589299994520843,
+    "validation": 0.3831000067293644,
+    "total": 1320.6177999963984
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26000906",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 2,
+      "labeled": 2,
+      "extracted": 2,
+      "qty_price_ok": 2
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "034_german_png.png",
+   "format": "png",
+   "layout": "german",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1418.5429999779444,
+    "extraction": 1.8441000138409436,
+    "validation": 0.2948000037577003,
+    "total": 1420.681899995543
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26003407",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 7,
+      "labeled": 7,
+      "extracted": 7,
+      "qty_price_ok": 7
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "035_german_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "german",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 20.74239999637939,
+    "extraction": 1.04160001501441,
+    "validation": 0.26879998040385544,
+    "total": 22.052799991797656
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26004080",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 1,
+      "labeled": 1,
+      "extracted": 1,
+      "qty_price_ok": 1
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "036_german_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "german",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 19.00160001241602,
+    "extraction": 1.0473000002093613,
+    "validation": 0.28089998522773385,
+    "total": 20.329799997853115
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26001565",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 2,
+      "labeled": 2,
+      "extracted": 2,
+      "qty_price_ok": 2
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "037_header_row_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "header_row",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "invalid",
+   "ms": {
+    "processing": 19.51700000790879,
+    "extraction": 1.4170999929774553,
+    "validation": 0.27760001830756664,
+    "total": 21.211700019193813
+   },
+   "invoices": [
+    {
+     "invoice_number": null,
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "MISSING_REQUIRED_FIELD"
+     ],
+     "detected": {
+      "MISSING_REQUIRED_FIELD": true
+     },
+     "status": "invalid",
+     "codes": [
+      "MISSING_REQUIRED_FIELD"
+     ],
+     "lines": {
+      "matched": 4,
+      "labeled": 4,
+      "extracted": 4,
+      "qty_price_ok": 4
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "038_header_row_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "header_row",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 20.784399996045977,
+    "extraction": 1.4258000010158867,
+    "validation": 0.28130001737736166,
+    "total": 22.491500014439225
+   },
+   "invoices": [
+    {
+     "invoice_number": "AC-00224",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 4,
+      "labeled": 4,
+      "extracted": 4,
+      "qty_price_ok": 4
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "039_header_row_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "header_row",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "invalid",
+   "ms": {
+    "processing": 18.089299992425367,
+    "extraction": 1.1915999930351973,
+    "validation": 0.3063000040128827,
+    "total": 19.587199989473447
+   },
+   "invoices": [
+    {
+     "invoice_number": "HB-03390",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": false,
+      "currency": true
+     },
+     "wrong": {
+      "total": [
+       "-24.71",
+       "24.71"
+      ]
+     },
+     "expected_findings": [
+      "TOTAL_MISMATCH"
+     ],
+     "detected": {
+      "TOTAL_MISMATCH": true
+     },
+     "status": "invalid",
+     "codes": [
+      "TOTAL_MISMATCH"
+     ],
+     "lines": {
+      "matched": 1,
+      "labeled": 1,
+      "extracted": 1,
+      "qty_price_ok": 1
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "040_header_row_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "header_row",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 23.20019999751821,
+    "extraction": 2.301400003489107,
+    "validation": 0.6539000023622066,
+    "total": 26.155500003369525
+   },
+   "invoices": [
+    {
+     "invoice_number": "GA-00191",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "LINE_ITEM_MISMATCH"
+     ],
+     "detected": {
+      "LINE_ITEM_MISMATCH": true
+     },
+     "status": "needs_review",
+     "codes": [
+      "LINE_ITEMS_SUM_MISMATCH",
+      "LINE_ITEM_MISMATCH"
+     ],
+     "lines": {
+      "matched": 2,
+      "labeled": 2,
+      "extracted": 2,
+      "qty_price_ok": 2
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "041_header_row_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "header_row",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 27.67810001387261,
+    "extraction": 1.996500010136515,
+    "validation": 0.6669999856967479,
+    "total": 30.34160000970587
+   },
+   "invoices": [
+    {
+     "invoice_number": "CG-09842",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "LINE_ITEM_MISMATCH"
+     ],
+     "detected": {
+      "LINE_ITEM_MISMATCH": true
+     },
+     "status": "needs_review",
+     "codes": [
+      "LINE_ITEMS_SUM_MISMATCH",
+      "LINE_ITEM_MISMATCH"
+     ],
+     "lines": {
+      "matched": 3,
+      "labeled": 3,
+      "extracted": 3,
+      "qty_price_ok": 3
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "042_header_row_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "header_row",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1400.8274000079837,
+    "extraction": 1.65789999300614,
+    "validation": 0.44929998693987727,
+    "total": 1402.9345999879297
+   },
+   "invoices": [
+    {
+     "invoice_number": "NT-02501",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 3,
+      "labeled": 3,
+      "extracted": 3,
+      "qty_price_ok": 3
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "043_header_row_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "header_row",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1369.1544999892358,
+    "extraction": 1.3730000064242631,
+    "validation": 0.34569998388178647,
+    "total": 1370.8731999795418
+   },
+   "invoices": [
+    {
+     "invoice_number": "HT-02772",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 3,
+      "labeled": 3,
+      "extracted": 3,
+      "qty_price_ok": 3
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "044_header_row_photo_jpg.jpg",
+   "format": "photo_jpg",
+   "layout": "header_row",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1346.2874999968335,
+    "extraction": 1.3638000236824155,
+    "validation": 0.38159999530762434,
+    "total": 1348.0329000158235
+   },
+   "invoices": [
+    {
+     "invoice_number": "PS-09791",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 2,
+      "labeled": 2,
+      "extracted": 2,
+      "qty_price_ok": 2
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "045_header_row_photo_jpg.jpg",
+   "format": "photo_jpg",
+   "layout": "header_row",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1294.12449998199,
+    "extraction": 1.0356999991927296,
+    "validation": 0.3173000004608184,
+    "total": 1295.4774999816436
+   },
+   "invoices": [
+    {
+     "invoice_number": "FE-00425",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 1,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "046_header_row_png.png",
+   "format": "png",
+   "layout": "header_row",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1299.455600004876,
+    "extraction": 1.6312999941874295,
+    "validation": 0.5281000048853457,
+    "total": 1301.6150000039488
+   },
+   "invoices": [
+    {
+     "invoice_number": "FK-02130",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 3,
+      "labeled": 3,
+      "extracted": 3,
+      "qty_price_ok": 3
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "047_header_row_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "header_row",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "invalid",
+   "ms": {
+    "processing": 23.300499975448474,
+    "extraction": 1.195400021970272,
+    "validation": 0.3302999830339104,
+    "total": 24.826199980452657
+   },
+   "invoices": [
+    {
+     "invoice_number": null,
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "MISSING_REQUIRED_FIELD"
+     ],
+     "detected": {
+      "MISSING_REQUIRED_FIELD": true
+     },
+     "status": "invalid",
+     "codes": [
+      "MISSING_REQUIRED_FIELD"
+     ],
+     "lines": {
+      "matched": 1,
+      "labeled": 1,
+      "extracted": 1,
+      "qty_price_ok": 1
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "048_header_row_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "header_row",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 26.72080000047572,
+    "extraction": 1.35570002021268,
+    "validation": 0.3573999856598675,
+    "total": 28.433900006348267
+   },
+   "invoices": [
+    {
+     "invoice_number": "ED-06243",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "LINE_ITEM_MISMATCH"
+     ],
+     "detected": {
+      "LINE_ITEM_MISMATCH": true
+     },
+     "status": "needs_review",
+     "codes": [
+      "LINE_ITEMS_SUM_MISMATCH",
+      "LINE_ITEM_MISMATCH"
+     ],
+     "lines": {
+      "matched": 2,
+      "labeled": 2,
+      "extracted": 2,
+      "qty_price_ok": 2
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "049_receipt_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "receipt",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 19.123299978673458,
+    "extraction": 1.0919000196736306,
+    "validation": 0.3538999881129712,
+    "total": 20.56909998646006
+   },
+   "invoices": [
+    {
+     "invoice_number": "R-007751",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "needs_review",
+     "codes": [
+      "CURRENCY_INFERRED",
+      "LOW_CONFIDENCE"
+     ],
+     "lines": {
+      "matched": 4,
+      "labeled": 4,
+      "extracted": 4,
+      "qty_price_ok": 4
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "050_receipt_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "receipt",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 17.915900010848418,
+    "extraction": 0.8030999742913991,
+    "validation": 0.34830000367946923,
+    "total": 19.067299988819286
+   },
+   "invoices": [
+    {
+     "invoice_number": "R-003840",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "DATE_IN_FUTURE"
+     ],
+     "detected": {
+      "DATE_IN_FUTURE": true
+     },
+     "status": "needs_review",
+     "codes": [
+      "CURRENCY_INFERRED",
+      "DATE_IN_FUTURE",
+      "LOW_CONFIDENCE"
+     ],
+     "lines": {
+      "matched": 1,
+      "labeled": 1,
+      "extracted": 1,
+      "qty_price_ok": 1
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "051_receipt_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "receipt",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 19.016800011740997,
+    "extraction": 0.904199987417087,
+    "validation": 0.35600000410340726,
+    "total": 20.27700000326149
+   },
+   "invoices": [
+    {
+     "invoice_number": "R-005654",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "needs_review",
+     "codes": [
+      "CURRENCY_INFERRED",
+      "LOW_CONFIDENCE"
+     ],
+     "lines": {
+      "matched": 3,
+      "labeled": 3,
+      "extracted": 3,
+      "qty_price_ok": 3
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "052_receipt_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "receipt",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 18.72890000231564,
+    "extraction": 1.0639000101946294,
+    "validation": 0.36700000055134296,
+    "total": 20.159800013061613
+   },
+   "invoices": [
+    {
+     "invoice_number": "R-007052",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "needs_review",
+     "codes": [
+      "CURRENCY_INFERRED",
+      "LOW_CONFIDENCE"
+     ],
+     "lines": {
+      "matched": 5,
+      "labeled": 5,
+      "extracted": 5,
+      "qty_price_ok": 5
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "053_receipt_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "receipt",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 18.941899994388223,
+    "extraction": 1.1587000044528395,
+    "validation": 0.36419997923076153,
+    "total": 20.464799978071824
+   },
+   "invoices": [
+    {
+     "invoice_number": "R-007434",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "needs_review",
+     "codes": [
+      "CURRENCY_INFERRED",
+      "LOW_CONFIDENCE"
+     ],
+     "lines": {
+      "matched": 2,
+      "labeled": 2,
+      "extracted": 2,
+      "qty_price_ok": 2
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "054_receipt_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "receipt",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 1522.377499990398,
+    "extraction": 1.5346999862231314,
+    "validation": 0.6929000082891434,
+    "total": 1524.6050999849103
+   },
+   "invoices": [
+    {
+     "invoice_number": "R-009363",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "needs_review",
+     "codes": [
+      "CURRENCY_INFERRED",
+      "LOW_CONFIDENCE"
+     ],
+     "lines": {
+      "matched": 4,
+      "labeled": 4,
+      "extracted": 4,
+      "qty_price_ok": 4
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "055_receipt_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "receipt",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 1271.1902000010014,
+    "extraction": 1.6524000093340874,
+    "validation": 0.5783999804407358,
+    "total": 1273.4209999907762
+   },
+   "invoices": [
+    {
+     "invoice_number": "R-008835",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "DATE_IN_FUTURE"
+     ],
+     "detected": {
+      "DATE_IN_FUTURE": true
+     },
+     "status": "needs_review",
+     "codes": [
+      "DATE_IN_FUTURE",
+      "LINE_ITEMS_SUM_MISMATCH"
+     ],
+     "lines": {
+      "matched": 4,
+      "labeled": 5,
+      "extracted": 4,
+      "qty_price_ok": 4
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "056_receipt_photo_jpg.jpg",
+   "format": "photo_jpg",
+   "layout": "receipt",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1154.06410000287,
+    "extraction": 0.7678999972995371,
+    "validation": 0.4047999973408878,
+    "total": 1155.2367999975104
+   },
+   "invoices": [
+    {
+     "invoice_number": "R-003347",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 1,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "057_receipt_photo_jpg.jpg",
+   "format": "photo_jpg",
+   "layout": "receipt",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1181.524299987359,
+    "extraction": 0.7504000095650554,
+    "validation": 0.4962999955751002,
+    "total": 1182.7709999924991
+   },
+   "invoices": [
+    {
+     "invoice_number": "R-001770",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 1,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "058_receipt_png.png",
+   "format": "png",
+   "layout": "receipt",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 1180.9643000015058,
+    "extraction": 1.0765000188257545,
+    "validation": 0.5648999940603971,
+    "total": 1182.605700014392
+   },
+   "invoices": [
+    {
+     "invoice_number": "R-008057",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 2,
+      "labeled": 2,
+      "extracted": 2,
+      "qty_price_ok": 2
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "059_receipt_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "receipt",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 19.78080000844784,
+    "extraction": 1.1096999805886298,
+    "validation": 0.3836000105366111,
+    "total": 21.27409999957308
+   },
+   "invoices": [
+    {
+     "invoice_number": "R-008836",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 4,
+      "labeled": 4,
+      "extracted": 4,
+      "qty_price_ok": 4
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "060_receipt_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "receipt",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "needs_review",
+   "ms": {
+    "processing": 17.781800008378923,
+    "extraction": 0.7777000137139112,
+    "validation": 0.3856999974232167,
+    "total": 18.94520001951605
+   },
+   "invoices": [
+    {
+     "invoice_number": "R-006889",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "needs_review",
+     "codes": [
+      "CURRENCY_INFERRED",
+      "LOW_CONFIDENCE"
+     ],
+     "lines": {
+      "matched": 1,
+      "labeled": 1,
+      "extracted": 1,
+      "qty_price_ok": 1
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "061_unseen_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 26.410699996631593,
+    "extraction": 2.3856000043451786,
+    "validation": 0.01659998088143766,
+    "total": 28.81289998185821
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/6018",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [
+      "DATE_IN_FUTURE"
+     ],
+     "detected": {
+      "DATE_IN_FUTURE": false
+     },
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 5,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": true,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "NO_INVOICE_FOUND: no invoice data recognised in this document"
+  },
+  {
+   "file": "062_unseen_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 20.012399996630847,
+    "extraction": 3.335400018841028,
+    "validation": 0.018699996871873736,
+    "total": 23.36650001234375
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/8127",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 5,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": false,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "NO_INVOICE_FOUND: no invoice data recognised in this document"
+  },
+  {
+   "file": "063_unseen_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 20.199599995976314,
+    "extraction": 3.337900008773431,
+    "validation": 0.016600009985268116,
+    "total": 23.554100014735013
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/3450",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 5,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": true,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "NO_INVOICE_FOUND: no invoice data recognised in this document"
+  },
+  {
+   "file": "064_unseen_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 19.79879999998957,
+    "extraction": 2.4651999992784113,
+    "validation": 0.014499993994832039,
+    "total": 22.278499993262812
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/3750",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 9,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": false,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "NO_INVOICE_FOUND: no invoice data recognised in this document"
+  },
+  {
+   "file": "065_unseen_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 20.0681000133045,
+    "extraction": 3.336299996590242,
+    "validation": 0.016900012269616127,
+    "total": 23.42130002216436
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/4983",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [
+      "DATE_IN_FUTURE"
+     ],
+     "detected": {
+      "DATE_IN_FUTURE": false
+     },
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 4,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": false,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "NO_INVOICE_FOUND: no invoice data recognised in this document"
+  },
+  {
+   "file": "066_unseen_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 1296.590699988883,
+    "extraction": 0.5410000158008188,
+    "validation": 0.025399989681318402,
+    "total": 1297.1570999943651
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/5452",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 3,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": true,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "NO_INVOICE_FOUND: no invoice data recognised in this document"
+  },
+  {
+   "file": "067_unseen_scanned_pdf.pdf",
+   "format": "scanned_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 1223.5008999996353,
+    "extraction": 0.8960000122897327,
+    "validation": 0.02409997978247702,
+    "total": 1224.4209999917075
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/3964",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 1,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": true,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "NO_INVOICE_FOUND: no invoice data recognised in this document"
+  },
+  {
+   "file": "068_unseen_photo_jpg.jpg",
+   "format": "photo_jpg",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 1283.0552000086755,
+    "extraction": 0.4245000018272549,
+    "validation": 0.019899976905435324,
+    "total": 1283.4995999874081
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/2817",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [
+      "DATE_IN_FUTURE"
+     ],
+     "detected": {
+      "DATE_IN_FUTURE": false
+     },
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 3,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": false,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "NO_INVOICE_FOUND: no invoice data recognised in this document"
+  },
+  {
+   "file": "069_unseen_photo_jpg.jpg",
+   "format": "photo_jpg",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 1450.881800003117,
+    "extraction": 0.541499990504235,
+    "validation": 0.02169999061152339,
+    "total": 1451.4449999842327
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/3471",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 8,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": true,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "NO_INVOICE_FOUND: no invoice data recognised in this document"
+  },
+  {
+   "file": "070_unseen_png.png",
+   "format": "png",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 1249.780300015118,
+    "extraction": 0.880400009918958,
+    "validation": 0.023299973690882325,
+    "total": 1250.6839999987278
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/8428",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 3,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": true,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "NO_INVOICE_FOUND: no invoice data recognised in this document"
+  },
+  {
+   "file": "071_unseen_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 21.972599992295727,
+    "extraction": 2.6594999944791198,
+    "validation": 0.01650000922381878,
+    "total": 24.648599995998666
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/4836",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 4,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": false,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "NO_INVOICE_FOUND: no invoice data recognised in this document"
+  },
+  {
+   "file": "072_unseen_digital_pdf.pdf",
+   "format": "digital_pdf",
+   "layout": "unseen",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "no_invoice_found",
+   "validation_status": "no_invoices",
+   "ms": {
+    "processing": 21.101399994222447,
+    "extraction": 3.519399993820116,
+    "validation": 0.0171000137925148,
+    "total": 24.637900001835078
+   },
+   "invoices": [
+    {
+     "invoice_number": "2026/3882",
+     "found": false,
+     "method": null,
+     "fields": {
+      "invoice_number": false,
+      "invoice_date": false,
+      "supplier_name": false,
+      "customer_name": false,
+      "subtotal": false,
+      "tax": false,
+      "total": false,
+      "currency": false
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": null,
+     "codes": [],
+     "lines": {
+      "matched": 0,
+      "labeled": 9,
+      "extracted": 0,
+      "qty_price_ok": 0
+     },
+     "charges": {
+      "labeled": false,
+      "ok": false,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": "NO_INVOICE_FOUND: no invoice data recognised in this document"
+  },
+  {
+   "file": "batch_01_4_invoices.pdf",
+   "format": "multi_invoice_pdf",
+   "layout": "mixed",
+   "expect": "ok",
+   "pages": 5,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 42.011799989268184,
+    "extraction": 9.259800019208342,
+    "validation": 1.4606999757234007,
+    "total": 52.732299984199926
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26007813",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 7,
+      "labeled": 7,
+      "extracted": 7,
+      "qty_price_ok": 7
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26007881",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 40,
+      "labeled": 40,
+      "extracted": 40,
+      "qty_price_ok": 40
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    },
+    {
+     "invoice_number": "INV-2026-1800",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 2,
+      "labeled": 2,
+      "extracted": 2,
+      "qty_price_ok": 2
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    },
+    {
+     "invoice_number": "INV-2026-3710",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 8,
+      "labeled": 8,
+      "extracted": 8,
+      "qty_price_ok": 8
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "batch_02_3_invoices.pdf",
+   "format": "multi_invoice_pdf",
+   "layout": "mixed",
+   "expect": "ok",
+   "pages": 3,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 21.549500001128763,
+    "extraction": 4.976099997293204,
+    "validation": 1.0918000189121813,
+    "total": 27.61740001733415
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26005001",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 6,
+      "labeled": 6,
+      "extracted": 6,
+      "qty_price_ok": 6
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    },
+    {
+     "invoice_number": "AA-09514",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 7,
+      "labeled": 7,
+      "extracted": 7,
+      "qty_price_ok": 7
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26003619",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 7,
+      "labeled": 7,
+      "extracted": 7,
+      "qty_price_ok": 7
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "batch_03_4_invoices.pdf",
+   "format": "multi_invoice_pdf",
+   "layout": "mixed",
+   "expect": "ok",
+   "pages": 4,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 23.434200003976002,
+    "extraction": 5.160900007467717,
+    "validation": 1.4353999868035316,
+    "total": 30.03049999824725
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-3976",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 5,
+      "labeled": 5,
+      "extracted": 5,
+      "qty_price_ok": 5
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26003268",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 3,
+      "labeled": 3,
+      "extracted": 3,
+      "qty_price_ok": 3
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    },
+    {
+     "invoice_number": "GD-06280",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 8,
+      "labeled": 8,
+      "extracted": 8,
+      "qty_price_ok": 8
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    },
+    {
+     "invoice_number": "INV-2026-2587",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 3,
+      "labeled": 3,
+      "extracted": 3,
+      "qty_price_ok": 3
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "batch_04_4_invoices.pdf",
+   "format": "multi_invoice_pdf",
+   "layout": "mixed",
+   "expect": "ok",
+   "pages": 4,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 22.976399981416762,
+    "extraction": 5.468900024425238,
+    "validation": 1.5257999766618013,
+    "total": 29.9710999825038
+   },
+   "invoices": [
+    {
+     "invoice_number": "RR-04165",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 3,
+      "labeled": 3,
+      "extracted": 3,
+      "qty_price_ok": 3
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-0544",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 4,
+      "labeled": 4,
+      "extracted": 4,
+      "qty_price_ok": 4
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    },
+    {
+     "invoice_number": "INV-2026-0297",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 6,
+      "labeled": 6,
+      "extracted": 6,
+      "qty_price_ok": 6
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    },
+    {
+     "invoice_number": "RE26006844",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 7,
+      "labeled": 7,
+      "extracted": 7,
+      "qty_price_ok": 7
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "batch_05_5_invoices.pdf",
+   "format": "multi_invoice_pdf",
+   "layout": "mixed",
+   "expect": "ok",
+   "pages": 5,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "invalid",
+   "ms": {
+    "processing": 29.606500000227243,
+    "extraction": 7.203000015579164,
+    "validation": 1.9700999837368727,
+    "total": 38.77959999954328
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26006833",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 3,
+      "labeled": 3,
+      "extracted": 3,
+      "qty_price_ok": 3
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    },
+    {
+     "invoice_number": "HF-08225",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 7,
+      "labeled": 7,
+      "extracted": 7,
+      "qty_price_ok": 7
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    },
+    {
+     "invoice_number": "SG-04924",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "TOTAL_MISMATCH"
+     ],
+     "detected": {
+      "TOTAL_MISMATCH": true
+     },
+     "status": "invalid",
+     "codes": [
+      "TOTAL_MISMATCH"
+     ],
+     "lines": {
+      "matched": 5,
+      "labeled": 5,
+      "extracted": 5,
+      "qty_price_ok": 5
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    },
+    {
+     "invoice_number": "FG-02963",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 5,
+      "labeled": 5,
+      "extracted": 5,
+      "qty_price_ok": 5
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    },
+    {
+     "invoice_number": "INV-2026-2742",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [],
+     "lines": {
+      "matched": 4,
+      "labeled": 4,
+      "extracted": 4,
+      "qty_price_ok": 4
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "dup_01_classic.pdf",
+   "format": "digital_pdf",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "invalid",
+   "ms": {
+    "processing": 19.704799982719123,
+    "extraction": 1.1741000053007156,
+    "validation": 0.1469000126235187,
+    "total": 21.025800000643358
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-8476",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "DUPLICATE_INVOICE"
+     ],
+     "detected": {
+      "DUPLICATE_INVOICE": true
+     },
+     "status": "invalid",
+     "codes": [
+      "DUPLICATE_INVOICE"
+     ],
+     "lines": {
+      "matched": 4,
+      "labeled": 4,
+      "extracted": 4,
+      "qty_price_ok": 4
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "dup_02_classic.pdf",
+   "format": "digital_pdf",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "invalid",
+   "ms": {
+    "processing": 19.68009999836795,
+    "extraction": 1.3973000168334693,
+    "validation": 0.18199998885393143,
+    "total": 21.25940000405535
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-4221",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "DUPLICATE_INVOICE"
+     ],
+     "detected": {
+      "DUPLICATE_INVOICE": true
+     },
+     "status": "invalid",
+     "codes": [
+      "CURRENCY_INFERRED",
+      "DUPLICATE_INVOICE",
+      "LOW_CONFIDENCE"
+     ],
+     "lines": {
+      "matched": 7,
+      "labeled": 7,
+      "extracted": 7,
+      "qty_price_ok": 7
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "dup_03_classic.pdf",
+   "format": "digital_pdf",
+   "layout": "classic",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "invalid",
+   "ms": {
+    "processing": 19.739899988053367,
+    "extraction": 1.351100014289841,
+    "validation": 0.16070000128820539,
+    "total": 21.251700003631413
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-4695",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "DUPLICATE_INVOICE"
+     ],
+     "detected": {
+      "DUPLICATE_INVOICE": true
+     },
+     "status": "invalid",
+     "codes": [
+      "DUPLICATE_INVOICE"
+     ],
+     "lines": {
+      "matched": 5,
+      "labeled": 5,
+      "extracted": 5,
+      "qty_price_ok": 5
+     },
+     "charges": {
+      "labeled": true,
+      "ok": true,
+      "extracted": true
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "dup_04_two_column.pdf",
+   "format": "digital_pdf",
+   "layout": "two_column",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "invalid",
+   "ms": {
+    "processing": 21.236200002022088,
+    "extraction": 1.3081000070087612,
+    "validation": 0.22560000070370734,
+    "total": 22.769900009734556
+   },
+   "invoices": [
+    {
+     "invoice_number": "WH-00776",
+     "found": true,
+     "method": "rules",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [
+      "DUPLICATE_INVOICE"
+     ],
+     "detected": {
+      "DUPLICATE_INVOICE": true
+     },
+     "status": "invalid",
+     "codes": [
+      "DUPLICATE_INVOICE"
+     ],
+     "lines": {
+      "matched": 3,
+      "labeled": 3,
+      "extracted": 3,
+      "qty_price_ok": 3
+     },
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "register_01.xlsx",
+   "format": "xlsx",
+   "layout": "register",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 157.49359998153523,
+    "extraction": 1.0546000266913325,
+    "validation": 4.923499975120649,
+    "total": 163.4716999833472
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-3596",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-9543",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-0277",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-1050",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-9268",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-5895",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-0724",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-8891",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-1170",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-6318",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-0324",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-8300",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "register_02.xlsx",
+   "format": "xlsx",
+   "layout": "register",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 12.314099993091077,
+    "extraction": 0.7862999918870628,
+    "validation": 4.1711000085342675,
+    "total": 17.271499993512407
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-8932",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-4578",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-4680",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-8995",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-6172",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-5946",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-1465",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-3613",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-3465",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "register_03.xlsx",
+   "format": "xlsx",
+   "layout": "register",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 11.23659999575466,
+    "extraction": 0.6227999983821064,
+    "validation": 3.434499987633899,
+    "total": 15.293899981770664
+   },
+   "invoices": [
+    {
+     "invoice_number": "INV-2026-5761",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-2868",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-9021",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-6636",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-7276",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-1711",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "INV-2026-2112",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "export_01.csv",
+   "format": "csv",
+   "layout": "register",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 101.93440000875853,
+    "extraction": 1.047199999447912,
+    "validation": 4.1877999901771545,
+    "total": 107.1693999983836
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26004646",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26005550",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26000370",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26002434",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26001923",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26000731",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26003969",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26005075",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "export_02.csv",
+   "format": "csv",
+   "layout": "register",
+   "expect": "ok",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "success",
+   "validation_status": "valid",
+   "ms": {
+    "processing": 6.333700002869591,
+    "extraction": 0.6938999867998064,
+    "validation": 3.2708000217098743,
+    "total": 10.298400011379272
+   },
+   "invoices": [
+    {
+     "invoice_number": "RE26006142",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26000940",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26006386",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26004915",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26001403",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    },
+    {
+     "invoice_number": "RE26009491",
+     "found": true,
+     "method": "spreadsheet",
+     "fields": {
+      "invoice_number": true,
+      "invoice_date": true,
+      "supplier_name": true,
+      "customer_name": true,
+      "subtotal": true,
+      "tax": true,
+      "total": true,
+      "currency": true
+     },
+     "wrong": {},
+     "expected_findings": [],
+     "detected": {},
+     "status": "valid",
+     "codes": [
+      "MISSING_FIELD"
+     ],
+     "charges": {
+      "labeled": false,
+      "ok": true,
+      "extracted": false
+     }
+    }
+   ],
+   "extra_invoices": 0,
+   "reason": null
+  },
+  {
+   "file": "broken_empty.pdf",
+   "format": "broken",
+   "layout": "-",
+   "expect": "fail",
+   "pages": 0,
+   "crashed": null,
+   "processing_status": "failed",
+   "extraction_status": "failed",
+   "validation_status": "failed",
+   "ms": {
+    "processing": 0.07809998351149261,
+    "extraction": 0.008500006515532732,
+    "validation": 0.007299997378140688,
+    "total": 0.09389998740516603
+   },
+   "invoices": [],
+   "extra_invoices": 0,
+   "reason": "SOURCE_FAILED: document processing failed or produced no text"
+  },
+  {
+   "file": "broken_noise.pdf",
+   "format": "broken",
+   "layout": "-",
+   "expect": "fail",
+   "pages": 0,
+   "crashed": null,
+   "processing_status": "failed",
+   "extraction_status": "failed",
+   "validation_status": "failed",
+   "ms": {
+    "processing": 1.0210000036749989,
+    "extraction": 0.00890000956133008,
+    "validation": 0.007799972081556916,
+    "total": 1.0376999853178859
+   },
+   "invoices": [],
+   "extra_invoices": 0,
+   "reason": "SOURCE_FAILED: document processing failed or produced no text"
+  },
+  {
+   "file": "broken_fake.pdf",
+   "format": "broken",
+   "layout": "-",
+   "expect": "fail",
+   "pages": 0,
+   "crashed": null,
+   "processing_status": "failed",
+   "extraction_status": "failed",
+   "validation_status": "failed",
+   "ms": {
+    "processing": 1.5881000144872814,
+    "extraction": 0.00999998883344233,
+    "validation": 0.009300012607127428,
+    "total": 1.6074000159278512
+   },
+   "invoices": [],
+   "extra_invoices": 0,
+   "reason": "SOURCE_FAILED: document processing failed or produced no text"
+  },
+  {
+   "file": "broken_locked.pdf",
+   "format": "broken",
+   "layout": "-",
+   "expect": "fail",
+   "pages": 0,
+   "crashed": null,
+   "processing_status": "failed",
+   "extraction_status": "failed",
+   "validation_status": "failed",
+   "ms": {
+    "processing": 31.32119998917915,
+    "extraction": 0.015400000847876072,
+    "validation": 0.01580000389367342,
+    "total": 31.3523999939207
+   },
+   "invoices": [],
+   "extra_invoices": 0,
+   "reason": "SOURCE_FAILED: document processing failed or produced no text"
+  },
+  {
+   "file": "broken_damaged.xlsx",
+   "format": "broken",
+   "layout": "-",
+   "expect": "fail",
+   "pages": 0,
+   "crashed": null,
+   "processing_status": "failed",
+   "extraction_status": "failed",
+   "validation_status": "failed",
+   "ms": {
+    "processing": 5.400299996836111,
+    "extraction": 0.014299992471933365,
+    "validation": 0.013899989426136017,
+    "total": 5.42849997873418
+   },
+   "invoices": [],
+   "extra_invoices": 0,
+   "reason": "SOURCE_FAILED: document processing failed or produced no text"
+  },
+  {
+   "file": "broken_locked.xlsx",
+   "format": "broken",
+   "layout": "-",
+   "expect": "fail",
+   "pages": 0,
+   "crashed": null,
+   "processing_status": "failed",
+   "extraction_status": "failed",
+   "validation_status": "failed",
+   "ms": {
+    "processing": 1.2749000161420554,
+    "extraction": 0.009599985787644982,
+    "validation": 0.009500014130026102,
+    "total": 1.2940000160597265
+   },
+   "invoices": [],
+   "extra_invoices": 0,
+   "reason": "SOURCE_FAILED: document processing failed or produced no text"
+  },
+  {
+   "file": "broken_letter.docx",
+   "format": "broken",
+   "layout": "-",
+   "expect": "fail",
+   "pages": 0,
+   "crashed": null,
+   "processing_status": "failed",
+   "extraction_status": "failed",
+   "validation_status": "failed",
+   "ms": {
+    "processing": 5.093099985970184,
+    "extraction": 0.010400020983070135,
+    "validation": 0.010199990356341004,
+    "total": 5.113699997309595
+   },
+   "invoices": [],
+   "extra_invoices": 0,
+   "reason": "SOURCE_FAILED: document processing failed or produced no text"
+  },
+  {
+   "file": "broken_report.xls",
+   "format": "broken",
+   "layout": "-",
+   "expect": "fail",
+   "pages": 0,
+   "crashed": null,
+   "processing_status": "failed",
+   "extraction_status": "failed",
+   "validation_status": "failed",
+   "ms": {
+    "processing": 0.9442000009585172,
+    "extraction": 0.009300012607127428,
+    "validation": 0.00890000956133008,
+    "total": 0.9624000231269747
+   },
+   "invoices": [],
+   "extra_invoices": 0,
+   "reason": "SOURCE_FAILED: document processing failed or produced no text"
+  },
+  {
+   "file": "broken_blank_scan.png",
+   "format": "broken",
+   "layout": "-",
+   "expect": "fail",
+   "pages": 1,
+   "crashed": null,
+   "processing_status": "success",
+   "extraction_status": "failed",
+   "validation_status": "failed",
+   "ms": {
+    "processing": 14.759399986360222,
+    "extraction": 0.029999995604157448,
+    "validation": 0.01990000600926578,
+    "total": 14.809299987973645
+   },
+   "invoices": [],
+   "extra_invoices": 0,
+   "reason": "NO_TEXT: nothing to extract from"
+  }
+ ]
+}
