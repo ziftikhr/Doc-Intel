@@ -2,6 +2,8 @@
 
 DocIntel reads invoices in any common format (digital and scanned PDFs, phone photos, PNG/TIFF images, Excel and CSV), extracts the fields and line items, and checks the arithmetic in code. It stores every result in PostgreSQL with hybrid semantic + keyword search. A React app lets a person review only the invoices that need attention.
 
+▶ **Demo video:** https://youtu.be/vl3CqcmLFxI
+
 ```
 upload ─► queue ─► read file (text / OCR / spreadsheet) ─► extract (rules + LLM, grounded)
                                                             ─► validate (math, dates, duplicates)
@@ -19,7 +21,7 @@ upload ─► queue ─► read file (text / OCR / spreadsheet) ─► extract (
 | 5 | PDF, image, Excel and CSV processing pipelines | [`backend/src/docintel/processing`](backend/src/docintel/processing), described in [ARCHITECTURE.md](backend/docs/ARCHITECTURE.md#1--document-processing-srcdocintelprocessing) |
 | 6 | Automated tests and test results | [`backend/tests`](backend/tests), [`frontend/src/test`](frontend/src/test) and [`backend/docs/TEST_RESULTS.md`](backend/docs/TEST_RESULTS.md) |
 | 7 | Evaluation report with measured metrics | [`backend/docs/EVALUATION.md`](backend/docs/EVALUATION.md) |
-| 8 | Recorded walkthrough | *(video link)*; the recording script is in [`backend/docs/WALKTHROUGH.md`](backend/docs/WALKTHROUGH.md) |
+| 8 | Recorded walkthrough | **[Video demonstration on YouTube](https://youtu.be/vl3CqcmLFxI)**; the recording script is in [`backend/docs/WALKTHROUGH.md`](backend/docs/WALKTHROUGH.md) |
 
 ## Results at a glance
 
